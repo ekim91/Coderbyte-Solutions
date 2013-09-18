@@ -1,0 +1,17 @@
+var LongestWord = function(str){
+
+    var longest = "";
+    var re = /[a-z]/gi;
+    var words = [];
+    words = str.split(" ");
+    
+    for(var i=0; i<words.length; i++){
+        words[i] = words[i].match(re).join("");
+            if(words[i].length > longest.length){
+                longest = words[i];
+            }
+    }
+    
+    return longest;
+
+};
