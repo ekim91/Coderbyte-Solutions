@@ -1,0 +1,6 @@
+var FirstReverse = function(str){
+
+  strNew = str.split("").reverse.join("");
+  return strNew;
+  
+};
