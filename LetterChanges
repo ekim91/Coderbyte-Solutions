@@ -1,0 +1,20 @@
+var LetterChanges = function(str){
+
+  Letters = str.split("");
+  newStr = [];
+  for(var i =0; i<str.length; i++){
+    if(/[a-y]/gi.test(Letters[i])){
+      newStr[i] = String.fromCharCode(Letters[i].charCodeAt(0)+ 1);
+        if(/[aeiou]/gi.test(newStr[i])){
+          newStr[i] = newStr[i].toUpperCase();
+        }
+    }
+    else if(/[z]/gi.test(Letters[i])){
+      newStr[i] = "A";
+    }
+    else if(/[^a-z]/gi.test(Letters[i])){
+      newStr[i] = Letters[i];
+    }
+  }
+  return newStr.join("");
+};
