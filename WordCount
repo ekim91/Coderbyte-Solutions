@@ -1,0 +1,5 @@
+var WordCount = function(str){
+
+  words = str.split(" ");
+  return words.length;
+};
