@@ -1,0 +1,16 @@
+function SecondGreatLow(arr) { 
+
+ arr.sort(function(a,b){return a-b});
+ x = arr.length - 1;
+  
+ var secondhNum = arr[x-1];
+    if(x === 1){
+      secondhNum = arr[1];
+  }
+  var secondlNum = arr[0 + 1];
+    if(x === 1){
+      secondlNum = arr[0];
+    }
+    console.log(arr);
+  return secondlNum + " " + secondhNum;      
+}  
